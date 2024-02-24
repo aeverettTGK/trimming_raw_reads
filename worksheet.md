@@ -80,18 +80,26 @@ Answer:
 ## The following questions pertain to Remix 1 (the first time you change fastp parameters)
 ### Q23: What parameters did you change?
 Answer: 
+Changed -q from 15 to 30
+
 ### Q24: How did you expect this to change the filtering results (be specific)?
 Answer: 
+Limit the number of sequences left over after cleaning by removing any position with a PHRED score under 30
+
 ### Q25: Explain the results. Did the change cause an effect that matched your expectations? Use information from the fastp output to explain.
 Answer: 
-
+The number of reads was about cut in half, with every position in the read having a PHRED score of 30 or above (everything located in the green section of the Per base sequence quality map), matching expectations. 
 ---
 
 ## The following questions pertain to Remix 2 (the first time you change fastp parameters)
 ### Q26: What parameters did you change?
 Answer: 
+Changed -l from 15 to 20
+
 ### Q27: How did you expect this to change the filtering results (be specific)?
 Answer: 
+Remove any read with a length less than 20 base pairs long
+
 ### Q28: Explain the results. Did the change cause an effect that matched your expectations? Use information from the fastp output to explain.
 Answer: 
-
+The number of reads kept was again cut in half, and the smallest read was 20 base pairs long, meeting that expectation. Little else changed in terms of the data provided.
