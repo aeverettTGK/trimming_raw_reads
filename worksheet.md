@@ -20,35 +20,61 @@ Filtering the sequence data by removing/trimming low quality reads, adapters, an
 ## The following questions pertain to your first fastp run (without altering the parameters)
 ### Q5: How many reads were there in the R1 file before filtering?
 Answer:
+33967298
+
 ### Q6: How many bases were there in the R1 file before filtering?
 Answer:
+101 bases per sequence
+
 ### Q7: What proportion of bases were above PHRED score of 20 before filtering?
 Answer: 
+
+
 ### Q8: What proportion of bases were above PHRED score of 30 before filtering?
 Answer: 
 
+
 ### Q13: How many reads were there in the R2 file before filtering?
 Answer:
+
+
 ### Q14: How many bases were there in the R2 file before filtering?
 Answer:
+
+
 ### Q15: What proportion of bases were above PHRED score of 20 before filtering?
 Answer: 
+
+
 ### Q16: What proportion of bases were above PHRED score of 30 before filtering?
 Answer: 
 
+
+
 ### Q17: How many reads were there in the merged file after filtering?
 Answer:
+
+
 ### Q18: How many bases were there in the merged file after filtering?
 Answer:
+
+
 ### Q19: What proportion of bases in the merged file were above PHRED score of 20 after filtering?
 Answer: 
+
+
 ### Q20: What proportion of bases in the merged file were above PHRED score of 30 after filtering?
 Answer: 
 
+
+
 ### Q21: What is the difference between the merged and unmerged files (in principle, not quantitatively)?
 Answer:
+
+
 ### Q22: Why are the unmerged files for R1 and R2 different lengths?
 Answer:
+
 
 ---
 
