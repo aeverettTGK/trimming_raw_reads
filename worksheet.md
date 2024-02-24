@@ -7,6 +7,7 @@
 
 ## Q1: What does "cleaning" your reads mean?
 Answer:
+Filtering the sequence data by removing/trimming low quality reads, adapters, and by other 
 
 ### Q2: Open the script called "trim_raw_reads.sh". For every line that says ```insert description here```, replace that text with a description of what the line will do
 
