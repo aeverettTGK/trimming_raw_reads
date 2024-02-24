@@ -69,10 +69,10 @@ cd raw_reads
 ls
 pwd
 while read i; do 
-  	fastqc "$i"_1.fastq.gz # insert description here
-  	fastqc "$i"_2.fastq.gz # insert description here
+  	fastqc "$i"_1.fastq.gz # Runs quality control on the first raw FastQ file
+  	fastqc "$i"_2.fastq.gz # Runs quality control on the second raw FastQ file
 done<../sra_files/sra_list
-multiqc . # insert description here
+multiqc . # Compiles the quality control into html files
 cd ..
 
 ####################################################
@@ -86,13 +86,13 @@ ls *.fastq.gz | cut -d "." -f "1" | cut -d "_" -f "1" | sort | uniq > fastq_list
 while read z ; do 
 # Perform trimming
 # -----------------------------------------------
-# Insert description of -i and -I parameters here
-# Insert description of -m, --merged_out, --out1, and --out2 parameters here
-# Insert description of -e and -q here
-# Insert description of -u and -l here
-# Insert description of --adapter_sequence and --adapter_sequence_r2 here
-# Insert description of -M, -W, -5, and -3 here
-# Insert description of -c here
+# Name of input files
+# Name of output files
+# -e discards reads with average quality of 20 or below, -q discards bases with PHRED score of 15 or below
+# -u discards reads with 40% of bases under q value, -l discards reads with length 15 or below after filtering
+# Identifies adapter sequences for read 1 and 2
+# -M , -W, -5, and -3 all have to do a sliding window within which the program cuts bases. -M sets minimum average score, -W is the size of the window, -5 moves the window from the front to the tail, and -3 is the reverse
+# -c looks for overlaps of reads to correct mismatched bases
 # -----------------------------------------------
 fastp -i "$z"_1.fastq.gz -I "$z"_2.fastq.gz \
       -m --merged_out ${d}/cleaned_reads/merged_reads/"$z"_merged.fastq \
@@ -120,7 +120,7 @@ echo "Perform check of cleaned read files"
 cd ${d}/cleaned_reads/merged_reads
 pwd
 while read i; do 
-	fastqc "$i"_merged.fastq.gz # insert description here
+	fastqc "$i"_merged.fastq.gz # Runs quality control on the merged FastQ file
 done<${d}/sra_files/sra_list
 
  }
